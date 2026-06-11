@@ -1,0 +1,283 @@
+:root{
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*Aqui estaran los estilos del sidebar*/
+
+.sidebar{ 
+    background:linear-gradient(180deg,#0052cc,#003b99);
+    width: 16%;
+    height: 100vh;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20%;
+}
+.logo span{
+    color: #7dd3fc;
+}
+.menus{
+    width: 100%;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menus li{
+    width: 100%;
+    height: 55px;
+    list-style:none;
+    border-radius: 10px;
+}
+.menus li:hover, .menus .activo{
+    background:rgba(255,255,255,0.18);
+    transform:translateX(5px);
+}
+.menus li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.usuario{
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter:blur(200px);
+    color: white;
+    width:100%;
+    height: 75px;
+    text-align: left;
+    padding: 17px 20px;
+    margin-top: auto;
+    border-radius: 10px;
+}
+/*Aqui estaran los estilos del contenido  ain*/
+main{
+    background-color: aliceblue;
+    height:100vh;
+    margin-left:16%;
+    padding: 0px 40px;
+    overflow: auto;
+}
+.titulo-encabezado{
+    background-color: white;
+    width: 100%;
+    font-size: 25px;
+    padding: 0px 10px 0px 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    top: 5px;
+}
+.titulo-encabezado span{
+    background-color: rgb(65, 84, 115);
+    color:white;
+  
+    padding: 0px 10px;
+    border-radius: 20px; 
+}
+.titulo-encabezado i{
+    color: gray;
+}
+.titulo-encabezado i:hover{
+    color: rgb(13, 159, 69);
+}
+/*Aqui estaran los estilos de la seccion de los buscadores*/
+
+.buscadores{
+    display: flex;  
+    margin-bottom: 30px; 
+    justify-content: space-between;
+}
+.buscador{
+    width: 30%;
+    height: 35px;
+    margin-top: 20px;
+}
+.buscador input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgb(180, 212, 238);
+}
+.buscador input:focus{
+    outline: none;
+    border-style: groove;
+    border: 2px solid rgb(0, 81, 255);
+}
+
+/*Aqui estaran los estilos de la seccion empleos*/
+
+.empleos{
+    margin: 0px 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.empleos .empleo{
+    height: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(133, 133, 177);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.empleos .empleo:hover{
+   transform: translate(5px,-5px);
+   box-shadow: 2px 2px 5px rgb(0, 89, 255);
+}
+.empleos .empleo p{
+    color: green;
+ 
+}
+.empleos .empleo span{
+    background-color:green;
+    color: white;
+    width: 80px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 5px;
+    
+}
+.empleo button{
+    background-color: #0052cc;
+    color: white;
+    padding: 9px;
+    border-radius: 7px;
+    border: none;
+}
+.empleo button:hover{
+    background-color: #003b99;
+    
+}
+.empleo button:active{
+    background-color: rgb(78, 115, 23);
+    
+}
+
+/*Aqui estaran los estilos de las imagenes de empleos*/
+
+.empleos2{
+    margin: 20px 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+    overflow: hidden;
+}
+.empleos2:hover{
+   overflow-x: auto;
+}
+.empleos2 article{
+    height: 200px;
+    border-radius: 10px;
+}
+.empleos2 article:hover{
+  transform: translate(0px,-10px)
+}
+.empleos2 article img{
+    height: 100%;
+    border-radius: 10px;
+}
+.empleos2 article img:hover{
+  transform: translateY(-10px)
+}
+
+
+
+/*
+
+
+
+.empleo:nth-child(even) button{
+    background-color: #00aeff;
+   
+}
+    */
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+    .sidebar{
+        width:80px;
+        padding: 30px 10px;
+
+    }
+
+    .logo{
+        font-size:22px;
+    }
+    .menus li{
+         width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+    .logo,
+    .menus a span,
+    .usuario{
+        display:none;
+
+    }
+
+    main{
+        margin-left:80px;
+    }
+
+    .menus a{
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .bara-superior{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .bara-superior h1{
+        font-size:28px;
+    }
+}

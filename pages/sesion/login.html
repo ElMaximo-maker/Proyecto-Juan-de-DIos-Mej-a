@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="../../css/login.css">
+</head>
+<body>
+    <form  id="miForm" method="post">
+        <label class="titulo">ImpulsaGE</label>
+        <p class="subtitulo">Iniciar Sesión</p>
+        <div class="grupo-input">
+            <label for="">Correo Electrónico</label>
+            <input id="correo" type="email" placeholder="tucorreo@ejemplo.com">
+            <span class="error" id="error-correo"></span>
+        </div>
+        <div class="grupo-input">
+            <label for="">Contraseña</label>
+            <input id="clave" type="password">
+            <span class="error" id="error-clave"></span>
+        </div>
+        <button type="submit">Ingresar</button>
+        <div class="cuenta">
+            <p>¿No tienes cuenta?</p>
+            <a href="./register.html">Regístrate aquí</a>
+        </div>
+        
+    </form>
+    
+</body>
+<script src="../../js/login.js"></script>
+</html>

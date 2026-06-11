@@ -1,0 +1,280 @@
+:root{
+    --color-primario:white;
+    --color-secundario:aliceblue;
+    --certro:center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*Aqui iran los estilos del header*/
+header{
+    background-color: rgb(3, 73, 252);
+    color: var(--color-primario);
+    width: 100%;
+    height: 60px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+header .logo{
+    background-color: rgb(3, 73, 252);
+    color:var(--color-primario);
+    width: 80px;
+    display: flex;
+}
+header .logo strong{
+    font-size: 25px;
+}
+header button{
+    display: none;
+}
+header nav {
+    display: flex;
+}
+header nav .menus{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+header nav .menus a{
+    color: var(--color-primario);
+    text-decoration: none;
+}
+header nav .menus a:hover{
+    color:rgb(118, 215, 200);
+
+}
+
+/**Aqui iran los estilos del main*/
+
+/*Aqui iran los estilos de la primera sección*/
+
+.seccion1{
+    background: linear-gradient(rgb(15, 109, 209),rgb(7, 224, 170));
+    color: var(--color-primario);
+    text-align: center;
+    width: 100%;
+    height: 540px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--certro);
+    align-items: var(--certro);
+    gap: 25px;
+    
+}
+.seccion1 h1{
+    color: var(--color-primario);
+    font-size: 60px;
+    font-weight:bold;
+    font-family: var();
+}
+.seccion1 p{
+    font-size: 21px;
+    font-weight:lighter;
+}
+.seccion1 .seccion1_contenedor{ 
+    width: 330px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.seccion1_contenedor .boton1, .boton2{
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight:lighter;
+    font-size: 22px;
+    padding:10px 5px;
+ }
+.boton1{
+    background-color:var(--color-primario);
+    color:black;
+    width: 56%;
+    height: 100%;
+}
+.boton1:hover{
+   opacity: 80%;
+}
+.boton2{
+    color: var(--color-primario);
+    width: 40%;
+    height: 100%; 
+    border: 1px solid var(--color-primario);
+}
+.boton2:hover{
+    background-color: var(--color-primario);
+    color: black;
+}
+
+/*Aqui iran los estilos de la segunda sección*/
+
+.seccion2{
+    background-color:  var(--color-secundario);
+    text-align: var(--certro);
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: var(--certro);
+    gap: 25px;
+}
+.seccion2 div{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:var(--certro) ;
+    align-items: var(--certro);
+    gap: 10px;
+}
+.seccion2 h3{
+  color:rgb(16, 136, 223);
+  font-size: 30px;
+}
+.seccion2 p{
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+/*Aqui iran los estilos de la tercera sección*/
+
+.seccion3{
+    text-align: var(--certro);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+.seccion3 h1{
+   font-size: 33px;
+   font-weight: bolder;
+}
+.seccion3_contenedor{
+    width: 100%;
+    height: 250px;
+    padding: 15px 0px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:25px;
+}
+.modulos{
+    width: 26%;
+    height: 85%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(188, 203, 217);  
+}
+.modulos:hover{
+    transform: translate3d(0px,-10px,10px);
+    transition: 0.3s;
+    box-shadow: -2px 2px 10px rgb(81, 71, 71);
+}
+.modulos i{
+    font-size:40px;
+}
+.modulos h3{
+    font-size: 22px;
+    font-weight: bolder;
+}
+.modulos p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+/*Aqui estaran los estilos del footer */
+
+footer{
+    background-color: rgb(15, 109, 209);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--certro);
+    align-items: var(--certro);
+    gap: 15px;
+}
+footer .enlaces{
+    display: flex;
+    justify-content: var(--certro);
+    gap: 30px;
+}
+footer .enlaces img{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+footer p{
+    color: var(--color-primario);
+    font-size: 17px;
+    font-weight: lighter; 
+}
+
+@media screen and (max-width:900px){
+    .barra-menus{
+        background-color: rgb(35, 211, 73);
+        color: aliceblue;
+        font-size:30px;
+        width: 60px;
+        height: 40px;
+        border: 3px solid aliceblue;
+        border-radius: 10px;
+        display: flex;
+        justify-content:var(--certro);
+        align-items: var(--certro);
+    }
+    .barra-menus:hover{
+        background-color: rgb(23, 146, 50); 
+    }
+    .barra-menus:active{
+       background-color: rgb(35, 211, 73);
+    }
+    header nav {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:780px){
+
+    /*Aqui iran los estilos de la segunda sección*/
+    .seccion2{
+        height: auto;
+        padding: 25px 0px;
+        flex-direction: column;
+    }
+    .seccion2 div{
+        width: auto;
+        flex-direction: column;
+    }
+
+    /*Aqui iran los estilos de la tercera sección*/
+
+    .seccion3{
+        height: auto;
+    }
+    .seccion3_contenedor{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap:25px;
+    }
+    .modulos{
+        width: 90%;
+        height: 150px;
+        padding: 15px;
+    }
+   
+
+}
+

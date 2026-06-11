@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/register.css">
+    <title>Registro</title>
+</head>
+<body>
+    <form id="miForm" action="" method="post">
+        <label>Crear Cuenta en ImpulsaGE</label>
+        <div class="usuario">
+            <select id="tipoUsuario" class="select-usuario">
+                <option value="">-- Selecciona una opción --</option>
+                <option>Freelancer / Emprendedor</option>
+                <option>Joven en búsqueda de empleo</option>
+                <option>Empresa / Empleador</option>
+                <option value="1">Otros</option>
+            </select>
+            <span class="error" id="error-tipo"></span>
+        </div>
+        <div class="grupos-input">
+            <div>
+                <input id="nombre" type="text" placeholder="Nombre">
+                <span class="error" id="error-nombre"></span>
+            </div>
+            <div>
+                <input id="apellidos" type="text" placeholder="Apellidos">
+                <span class="error" id="error-apellidos"></span>
+            </div>
+        </div>
+
+        <div class="grupo-input"> 
+            <input id="edad" type="number" placeholder="Edad">
+            <span class="error" id="error-edad"></span>
+        </div>
+        <div class="grupo-input">
+            <input id="email" type="email" placeholder="Correo electrónico">
+            <span class="error" id="error-email"></span>
+        </div>
+        <div class="grupo-input">
+            <input id="telefono" type="tel" placeholder="Teléfono">
+            <span class="error" id="error-telefono"></span>
+        </div>
+
+        <button type="submit">Registrarme</button>
+    
+    </form>
+    
+</body>
+<script src="../../js/register.js"></script>
+</html>

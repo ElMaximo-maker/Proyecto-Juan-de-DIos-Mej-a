@@ -1,0 +1,218 @@
+:root{
+    --fuente:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --blanco:white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    background:linear-gradient(180deg,#0052cc,#003b99);
+    width: 16%;
+    height: 100vh;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20%;
+}
+.logo span{
+    color: #7dd3fc;
+}
+.menus{
+    width: 100%;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menus li{
+    width: 100%;
+    height: 55px;
+    list-style:none;
+    border-radius: 10px;
+}
+.menus li:hover, .menus .activo{
+    background:rgba(255,255,255,0.18);
+    transform:translateX(5px);
+}
+.menus li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.usuario{
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter:blur(200px);
+    color: white;
+    width:100%;
+    height: 75px;
+    text-align: left;
+    padding: 17px 20px;
+    margin-top:auto;
+    border-radius: 10px;
+}
+/*Aqui estaran los estilos del contenido*/
+
+main{
+    background-color: aliceblue;
+    height: 100vh;
+    font-family:var(--fuente);
+    margin-left:16%;
+    padding: 40px;
+    overflow:auto;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+    margin: 35px 0px 20px;
+}
+.subir-archivos{
+    background-color: var(--blanco);
+    width: 100%;
+    height: 300px;
+    border-color: #7bc0e0;
+    border-radius: 10px;
+    border-style:dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+.subir-archivos i{
+    color: gray;
+    font-size: 70px;
+    opacity: 80%;
+}
+.subir-archivos strong, .subir-archivos p{
+    font-size: 15px;
+   
+}
+.subir-archivos label{
+    background-color: #0052cc;
+    color: var(--blanco);
+    font-size: 20px;
+    display: inline-block;
+    padding: 13px 50px;
+    border-radius: 10px;
+}
+.subir-archivos label:hover{
+    background-color: #083791;
+
+}
+.subir-archivos input{
+    display: none;
+   
+}
+/*Aquio esaran los estilos de los archivos subidos*/
+.archivos-subidos{
+    background-color: var(--blanco);
+    width: 100%;
+    padding:20px 30px ;
+    border-radius: 15px;
+}
+.archivos-subidos article{
+    padding:20px 15px ;
+    border-bottom: 1px solid #7bc0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.archivos-subidos article:nth-child(odd) span{
+    color: green;
+}
+.archivos-subidos article:nth-child(even) span{
+   color: orange;
+}
+
+.archivos-subidos article:last-child{
+    border-bottom:none;
+}
+.archivos-subidos article:nth-child(even) {
+    background-color: aliceblue;
+}
+.archivos-subidos div strong{
+     color: rgb(101, 109, 113);
+   font-size: 16px;
+}
+.archivos-subidos div p{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+    .sidebar{
+        width:80px;
+        padding: 30px 10px;
+
+    }
+
+    .logo{
+        font-size:22px;
+    }
+    .menus li{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+   .logo,
+    .menus a span,
+    .usuario{
+        display:none;
+
+    }
+
+    main{
+        margin-left:80px;
+    }
+
+    .menus a{
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .bara-superior{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .bara-superior h1{
+        font-size:28px;
+    }
+}

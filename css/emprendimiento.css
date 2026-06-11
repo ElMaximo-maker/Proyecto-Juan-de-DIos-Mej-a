@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    background:linear-gradient(180deg,#0052cc,#003b99);
+    width: 16%;
+    height: 100vh;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20%;
+}
+.logo span{
+    color: #7dd3fc;
+}
+.menus{
+    width: 100%;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menus li{
+    width: 100%;
+    height: 55px;
+    list-style:none;
+    border-radius: 10px;
+}
+.menus li:hover, .menus .activo{
+    background:rgba(255,255,255,0.18);
+    transform:translateX(5px);
+}
+.menus li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.usuario{
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter:blur(200px);
+    color: white;
+    width:100%;
+    height: 75px;
+    text-align: left;
+    padding: 17px 20px;
+    margin-top:auto;
+    border-radius: 10px;
+}
+/*Aqui estaran los estilos del contenido*/
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+    .sidebar{
+        width:80px;
+        padding: 30px 10px;
+
+    }
+
+    .logo{
+        font-size:22px;
+    }
+    .menus li{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+    .logo,
+    .menus a span,
+    .usuario{
+        display:none;
+
+    }
+
+    main{
+        margin-left:80px;
+    }
+
+    .menus a{
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .bara-superior{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .bara-superior h1{
+        font-size:28px;
+    }
+}

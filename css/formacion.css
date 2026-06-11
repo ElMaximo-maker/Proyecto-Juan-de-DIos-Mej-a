@@ -1,0 +1,193 @@
+
+:root{
+    --fuente:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --blanco:white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+    background:linear-gradient(180deg,#0052cc,#003b99);
+    width: 16%;
+    height: 100vh;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20%;
+}
+.logo span{
+    color: #7dd3fc;
+}
+.menus{
+    width: 100%;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menus li{
+    width: 100%;
+    height: 55px;
+    list-style:none;
+    border-radius: 10px;
+}
+.menus li:hover, .menus .activo{
+    background:rgba(255,255,255,0.18);
+    transform:translateX(5px);
+}
+.menus li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.usuario{
+    background-color:rgba(255,255,255,0.1);
+    backdrop-filter:blur(200px);
+    color: white;
+    width:100%;
+    height: 75px;
+    text-align: left;
+    padding: 17px 20px;
+    margin-top:auto;
+    border-radius: 10px;
+}
+
+/*Aqui estaran los estilos del contenido main*/
+
+main{
+    background-color: aliceblue;
+    height:auto;
+    margin-left:16%;
+    padding: 40px 40px;
+    height: 100vh;
+    overflow:auto ;
+}
+h1.titulo-encabezado{
+    font-size: 40px;
+}
+h2.subtitulo{
+    font-size: 30px;
+    margin-top: 25px;
+}
+section.cursos{
+    margin-top: 25px;
+    flex-wrap: wrap;
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap: 25px;
+}
+.curso{
+    background-color: white;
+    padding: 27px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.curso p, .curso span{
+    font-size: 17px;
+}
+.curso p{
+    color: green;
+}
+.curso .campos{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.campos span{
+    background-color:rgb(162, 187, 218) ;
+    color: rgb(8, 8, 192);
+    padding: 7px 10px;
+    border-radius: 15px;
+}
+.curso button{
+    background-color:rgb(0, 115, 255);
+    color: white;
+    font-size: 17px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 15px;
+}
+.curso button:hover{
+    background-color:rgb(37, 108, 195);
+  
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+    .sidebar{
+        width:80px;
+        padding: 30px 10px;
+
+    }
+
+    .logo{
+        font-size:22px;
+    }
+    .menus li{
+         width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+   .logo,
+    .menus a span,
+    .usuario{
+        display:none;
+
+    }
+
+    main{
+        margin-left:80px;
+    }
+
+    .menus a{
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .bara-superior{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    .bara-superior h1{
+        font-size:28px;
+    }
+}
