@@ -1,7 +1,10 @@
 :root{
     --color-primario:white;
     --color-secundario:aliceblue;
-    --certro:center;
+    --color-principal:rgb(3, 73, 252);
+    --color-verde-principal: rgb(7, 224, 170);
+    --verde:rgb(6, 86, 66);
+    --centro:center;
 }
 
 *{
@@ -10,7 +13,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 /*Aqui iran los estilos del header*/
+
 header{
     background-color: rgb(3, 73, 252);
     color: var(--color-primario);
@@ -24,31 +29,38 @@ header{
     top: 0px;
 }
 header .logo{
-    background-color: rgb(3, 73, 252);
     color:var(--color-primario);
-    width: 80px;
+    width:auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+header .logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 header .logo strong{
     font-size: 25px;
 }
-header button{
+header .barra-menus{
     display: none;
 }
-header nav {
+header nav{
     display: flex;
 }
-header nav .menus{
+nav .menus{
     list-style: none;
     display: flex;
     justify-content: right;
     gap: 20px;
 }
-header nav .menus a{
+nav .menus a{
     color: var(--color-primario);
     text-decoration: none;
 }
-header nav .menus a:hover{
+nav .menus a:hover{
     color:rgb(118, 215, 200);
 
 }
@@ -66,8 +78,8 @@ header nav .menus a:hover{
     padding: 0px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: var(--certro);
-    align-items: var(--certro);
+    justify-content: var(--centro);
+    align-items: var(--centro);
     gap: 25px;
     
 }
@@ -123,7 +135,7 @@ header nav .menus a:hover{
     height: 180px;
     display: flex;
     justify-content:space-evenly;
-    align-items: var(--certro);
+    align-items: var(--centro);
     gap: 25px;
 }
 .seccion2 div{
@@ -131,8 +143,8 @@ header nav .menus a:hover{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content:var(--certro) ;
-    align-items: var(--certro);
+    justify-content:var(--centro) ;
+    align-items: var(--centro);
     gap: 10px;
 }
 .seccion2 h3{
@@ -147,7 +159,7 @@ header nav .menus a:hover{
 /*Aqui iran los estilos de la tercera sección*/
 
 .seccion3{
-    text-align: var(--certro);
+    text-align: var(--centro);
     width: 100%;
     height: 400px;
     display: flex;
@@ -191,6 +203,136 @@ header nav .menus a:hover{
     font-weight: lighter;
 }
 
+/*Aqui estaran los estilos de la sección problema */
+
+section.problema{
+    background-color: var(--color-secundario);
+    width: 100%;
+    padding:80px 40px;
+    border-top: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.problema>div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+section.problema>div .planteamiento{
+    max-width:500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.planteamiento h3{
+    color: var(--color-verde-principal);
+}
+.planteamiento h1{
+    font-size: 40px;
+    font-weight:lighter;
+}
+.planteamiento p{
+    color: gray;
+    font-size: 20px;
+}
+section.problema>div .contenedor{ /* Estilos del contenedor */
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.contenedor .contenido{
+    background-color: var(--color-primario);
+    max-width: 48%;
+    min-width: 100px;
+    flex-basis: 250px;
+    padding: 30px 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contenedor .contenido span{
+    background-color: orange;
+    width: 30px;
+    height: 3px;
+}
+.contenedor .contenido i{
+    font-style: initial;
+    font-size: 25px;
+}
+.contenedor .contenido strong{
+    font-weight: 17px;
+}
+.contenedor .contenido p{
+    color: gray;
+    font-weight: 16px;
+}
+
+/*Aqui estaran los estilos de la sección estadisticas*/
+
+section.estadisticas{
+    background-color: var(--verde);
+    text-align: center;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+}
+section.estadisticas>div{
+    max-width: 800px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.estadisticas h1{
+    color: var(--color-primario);
+}
+.estadisticas p{
+    color: var(--color-secundario);
+    max-width: 600px;
+    font-size: 17px;
+}
+.estadisticas article{ 
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+    gap: 40px;
+}
+.estadisticas article div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.estadisticas article div strong{
+    color: var(--color-primario);
+    font-size: 45px;
+    font-weight: bold;
+}
+.estadisticas article div span{
+    color: var(--color-secundario);
+    font-size: 16px;
+}
+
+/*Aqui estaran los estilos de la sección solucion */
+
+.solucion{
+    background: radial-gradient(var(--color-verde-principal),white, var(--color-primario));
+    width: 100%;
+    
+    
+}
+
+
+
+
+
+
 /*Aqui estaran los estilos del footer */
 
 footer{
@@ -199,13 +341,13 @@ footer{
     height: 130px;
     display: flex;
     flex-direction: column;
-    justify-content: var(--certro);
-    align-items: var(--certro);
+    justify-content: var(--centro);
+    align-items: var(--centro);
     gap: 15px;
 }
 footer .enlaces{
     display: flex;
-    justify-content: var(--certro);
+    justify-content: var(--centro);
     gap: 30px;
 }
 footer .enlaces img{
@@ -219,6 +361,9 @@ footer p{
     font-weight: lighter; 
 }
 
+
+
+
 @media screen and (max-width:900px){
     .barra-menus{
         background-color: rgb(35, 211, 73);
@@ -229,8 +374,8 @@ footer p{
         border: 3px solid aliceblue;
         border-radius: 10px;
         display: flex;
-        justify-content:var(--certro);
-        align-items: var(--certro);
+        justify-content:var(--centro);
+        align-items: var(--centro);
     }
     .barra-menus:hover{
         background-color: rgb(23, 146, 50); 
@@ -241,7 +386,18 @@ footer p{
     header nav {
         display: none;
     }
-    
+
+
+    /*Aqui estaran los estilos de la sección problema */
+
+    section.problema>div .contenedor{ /* Estilos del contenedor */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contenedor .contenido{
+        flex-grow: 1;
+    }
+
 }
 
 @media screen and (max-width:780px){
@@ -275,6 +431,14 @@ footer p{
         padding: 15px;
     }
    
+    /*Aqui estaran los estilos de la sección problema */
+
+    .contenedor .contenido{
+        max-width: none;
+      
+    }
+
+
 
 }
 
