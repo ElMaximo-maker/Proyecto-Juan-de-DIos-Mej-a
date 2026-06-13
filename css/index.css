@@ -226,7 +226,7 @@ section.problema>div .planteamiento{
     gap: 20px;
 }
 .planteamiento h3{
-    color: var(--color-verde-principal);
+    color: var(--verde);
 }
 .planteamiento h1{
     font-size: 40px;
@@ -321,15 +321,85 @@ section.estadisticas>div{
 
 /*Aqui estaran los estilos de la sección solucion */
 
-.solucion{
-    background: radial-gradient(var(--color-verde-principal),white, var(--color-primario));
-    width: 100%;
-    
-    
+section.solucion{
+    background-color:aliceblue;
+    padding: 150px 30px;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
 }
-
-
-
+.solucion>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--centro);
+    gap: 30px;
+}
+.solucion>div .plataforma{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.plataforma h3{
+    color: var(--verde);
+}
+.plataforma h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.plataforma p{
+    max-width: 550px;
+    color: gray;
+    font-size: 17px;
+}
+.solucion>div .contenedor-solucion{   /* Estilos del contenido de la seccion solucion */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.contenedor-solucion .contenido-solucion{
+    background-color: var(--color-primario);
+    min-width: 250px;
+    flex-basis: 340px;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.solucion-caja1{
+     border-top:  5px solid #2ecc71;
+}
+.solucion-caja2{
+    border-top: 5px solid #e67e22; 
+}
+.solucion-caja3{
+    border-top: 5px solid #9b59b6;
+}
+.contenido-solucion span{
+    color: gray;
+    font-size: 17px
+}
+.contenido-solucion div{
+    display: flex;
+    gap: 15px;
+}
+.contenido-solucion div i{
+    font-style: initial;
+}
+.contenido-solucion div strong{
+    font-weight: bold;
+}
+.contenido-solucion p, .contenido-solucion ul{
+    font-size: 17px
+}
+.contenido-solucion ul{
+    list-style-position: inside;
+    padding-left: 3px;
+    margin-left: 0;
+}
 
 
 
