@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 /*Aqui iran los estilos del header*/
@@ -247,16 +247,33 @@ section.problema>div .contenedor{ /* Estilos del contenedor */
     min-width: 100px;
     flex-basis: 250px;
     padding: 30px 20px;
-    border: 1px solid gray;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+.contenedor .contenido:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translate(0px,-5px);
+
+    transition: 0.3s;
+}
 .contenedor .contenido span{
-    background-color: orange;
     width: 30px;
     height: 3px;
+}
+.contenedor .contenido .barra1{
+    background-color: var(--verde);
+}
+.contenedor .contenido .barra2{
+    background-color: orange;
+}
+.contenedor .contenido .barra3{
+    background-color: rgb(195, 26, 195);
+}
+.contenedor .contenido .barra4{
+    background-color: var(--verde);
 }
 .contenedor .contenido i{
     font-style: initial;
@@ -354,12 +371,12 @@ section.solucion{
 }
 .solucion>div .contenedor-solucion{   /* Estilos del contenido de la seccion solucion */
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .contenedor-solucion .contenido-solucion{
     background-color: var(--color-primario);
-    min-width: 250px;
     flex-basis: 340px;
     padding: 35px 30px;
     border-radius: 10px;
@@ -400,6 +417,126 @@ section.solucion{
     padding-left: 3px;
     margin-left: 0;
 }
+
+/*Aqui estaran los estilos de la sección de objetivos */
+
+section.objetivos{
+    background-color:var(--color-primario);
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+}
+section.objetivos>div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.objetivos>div h3{
+   color: var(--verde);
+}
+.objetivos>div h1{
+    max-width: 600px;
+    font-size: 40px;
+}
+.objetivos article{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+.objetivos article .lista_objetivos{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.lista_objetivos>p{
+    max-width: 500px;
+    color: gray;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.lista_objetivos .objetivo{
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.objetivo i{
+    background-color: rgb(205, 254, 130);
+    color: var(--verde);
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    padding-right:3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.objetivo p{
+    font-size: 17px;
+    color: gray;
+}
+.objetivos article .justificacion{ /* Estilos de la justificacion */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.justificacion h2{ 
+    color: var(--color-verde-principal);
+}
+.justificacion>div{ 
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.justificacion .cuadro1{ 
+   background-color:rgb(200, 241, 139) ;
+}
+.justificacion .cuadro2{ 
+   background-color:rgb(248, 170, 170) ;
+}.justificacion .cuadro3{ 
+   background-color:rgb(240, 191, 240) ;
+}.justificacion .cuadro4{ 
+   background-color:rgb(216, 241, 180) ;
+}
+.justificacion>div div{ 
+    display: flex;
+    gap: 5px;
+}
+.justificacion>div div i{ 
+    font-style: initial;
+}
+.justificacion .cuadro1 div span{ 
+   color:rgb(84, 120, 29)  ;
+}
+.justificacion .cuadro1 p{ 
+    color: rgb(80, 115, 27) ;
+}
+.justificacion .cuadro2 div span{ 
+   color: rgb(164, 20, 20);
+}
+.justificacion .cuadro2 p{ 
+    color:rgb(155, 45, 45) ;
+}
+.justificacion .cuadro3 div span{ 
+   color: rgb(158, 22, 158) ;
+}
+.justificacion .cuadro3 p{ 
+    color: rgb(202, 61, 202) ;
+}
+.justificacion .cuadro4 div span{ 
+   color: rgb(100, 145, 36) ;
+}
+.justificacion .cuadro4 p{ 
+    color:rgb(114, 147, 66) ;
+}
+
 
 
 
@@ -464,9 +601,10 @@ footer p{
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .contenedor .contenido{
-        flex-grow: 1;
+   .contenedor .contenido{
+         flex-grow: 1;
     }
+
 
 }
 
@@ -507,8 +645,35 @@ footer p{
         max-width: none;
       
     }
+    .contenedor-solucion .contenido-solucion{
+    flex-grow: 1;
+    }
 
+    /*Aqui estaran los estilos de la sección de objetivos */
 
+    .objetivos>div h1{
+    font-size: 30px;
+    }
+    .objetivos article{
+    flex-wrap: wrap;
+    }
+    .lista_objetivos>p{
+        max-width: 660px;
+    }
+    .lista_objetivos .objetivo{
+        max-width: none;
+    }
+
+    .objetivos article .justificacion{ /* Estilos de la justificacion */
+        width: 100%;
+    }
+    .justificacion h2{ 
+        color: var(--color-verde-principal);
+    }
+    .justificacion>div{ 
+        max-width: none;
+        flex:1;
+    }
 
 }
 
