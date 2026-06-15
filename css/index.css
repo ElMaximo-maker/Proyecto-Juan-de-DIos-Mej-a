@@ -14,6 +14,7 @@
     scroll-behavior:smooth;
 }
 
+
 /*Aqui iran los estilos del header*/
 
 header{
@@ -208,7 +209,7 @@ nav .menus a:hover{
 section.problema{
     background-color: var(--color-secundario);
     width: 100%;
-    padding:80px 40px;
+    padding:120px 40px;
     border-top: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
@@ -413,7 +414,7 @@ section.solucion{
     font-size: 17px
 }
 .contenido-solucion ul{
-    list-style-position: inside;
+    list-style-position:inside;
     padding-left: 3px;
     margin-left: 0;
 }
@@ -423,7 +424,7 @@ section.solucion{
 section.objetivos{
     background-color:var(--color-primario);
     width: 100%;
-    padding: 60px 20px;
+    padding: 120px 20px;
     display: flex;
     justify-content: var(--centro);
     align-items: var(--centro);
@@ -648,6 +649,10 @@ footer p{
     .contenedor-solucion .contenido-solucion{
     flex-grow: 1;
     }
+
+    /*Estadisticas*/
+
+
 
     /*Aqui estaran los estilos de la sección de objetivos */
 
