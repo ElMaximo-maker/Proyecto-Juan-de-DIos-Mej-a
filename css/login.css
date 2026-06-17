@@ -1,6 +1,9 @@
 :root{
     --color-primario:white;
     --color-secundario:aliceblue;
+    --color-principal:rgb(3, 73, 252);
+    --color-verde-principal: rgb(7, 224, 170);
+    --verde:rgb(6, 86, 66);
     --certro:center;
 }
 

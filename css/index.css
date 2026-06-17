@@ -445,7 +445,6 @@ section.objetivos>div{
     display: flex;
     justify-content: center;
     gap: 50px;
-
 }
 .objetivos article .lista_objetivos{
     display: flex;
@@ -461,20 +460,11 @@ section.objetivos>div{
 .lista_objetivos .objetivo{
     max-width: 450px;
     display: flex;
-    align-items: center;
     gap: 15px;
 }
 .objetivo i{
-    background-color: rgb(205, 254, 130);
-    color: var(--verde);
+    font-style: initial;
     font-weight: bold;
-    width: 25px;
-    height: 25px;
-    padding-right:3px;
-    border-radius: 50%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
 }
 .objetivo p{
     font-size: 17px;
@@ -497,14 +487,14 @@ section.objetivos>div{
     gap: 5px;
 }
 .justificacion .cuadro1{ 
-   background-color:rgb(200, 241, 139) ;
+   background-color:rgb(238, 255, 213) ;
 }
 .justificacion .cuadro2{ 
-   background-color:rgb(248, 170, 170) ;
+   background-color:rgb(246, 204, 204) ;
 }.justificacion .cuadro3{ 
-   background-color:rgb(240, 191, 240) ;
+   background-color:rgb(252, 210, 252) ;
 }.justificacion .cuadro4{ 
-   background-color:rgb(216, 241, 180) ;
+   background-color:rgb(212, 255, 152) ;
 }
 .justificacion>div div{ 
     display: flex;
@@ -514,28 +504,28 @@ section.objetivos>div{
     font-style: initial;
 }
 .justificacion .cuadro1 div span{ 
-   color:rgb(84, 120, 29)  ;
+   color:rgb(77, 116, 18)  ;
 }
 .justificacion .cuadro1 p{ 
-    color: rgb(80, 115, 27) ;
+    color: rgb(51, 72, 19) ;
 }
 .justificacion .cuadro2 div span{ 
-   color: rgb(164, 20, 20);
+   color: rgb(225, 30, 30);
 }
 .justificacion .cuadro2 p{ 
-    color:rgb(155, 45, 45) ;
+    color:rgb(133, 41, 41) ;
 }
 .justificacion .cuadro3 div span{ 
-   color: rgb(158, 22, 158) ;
+   color: rgb(255, 1, 255) ;
 }
 .justificacion .cuadro3 p{ 
-    color: rgb(202, 61, 202) ;
+    color: rgb(131, 27, 131) ;
 }
 .justificacion .cuadro4 div span{ 
-   color: rgb(100, 145, 36) ;
+   color: rgb(57, 87, 16) ;
 }
 .justificacion .cuadro4 p{ 
-    color:rgb(114, 147, 66) ;
+    color:rgb(76, 113, 20) ;
 }
 
 
