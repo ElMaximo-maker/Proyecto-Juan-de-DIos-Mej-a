@@ -169,7 +169,6 @@ main{
     font-weight: bold;
     padding: 4px 7px;
     border-radius: 5px;
-    
 }
 .empleo button{
     background-color: #0052cc;
@@ -180,11 +179,9 @@ main{
 }
 .empleo button:hover{
     background-color: #003b99;
-    
 }
 .empleo button:active{
-    background-color: rgb(78, 115, 23);
-    
+    background-color: rgb(78,115, 23);
 }
 
 /*Aqui estaran los estilos de las imagenes de empleos*/
@@ -194,10 +191,8 @@ main{
     display: flex;
     gap: 15px;
     justify-content: left;
-    overflow: hidden;
-}
-.empleos2:hover{
-   overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 .empleos2 article{
     height: 200px;
