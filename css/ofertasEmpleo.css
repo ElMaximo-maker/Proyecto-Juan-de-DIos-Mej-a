@@ -1,8 +1,7 @@
 :root{
 
 }
-*{
-    padding: 0;
+*{   padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -176,6 +175,7 @@ main{
     padding: 9px;
     border-radius: 7px;
     border: none;
+    transition: 3s;
 }
 .empleo button:hover{
     background-color: #003b99;
