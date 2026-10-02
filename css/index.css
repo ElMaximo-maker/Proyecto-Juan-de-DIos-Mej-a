@@ -28,6 +28,7 @@ header{
     align-items: center;
     position: sticky;
     top: 0px;
+    z-index: 20;
 }
 header .logo{
     color:var(--color-primario);
