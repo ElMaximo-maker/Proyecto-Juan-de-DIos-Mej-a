@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+    <div class="modal" id="modal">
+        <div class="container_modal">
+            <div class="titulo_modal">Editar Perfi de Usuario</div>
+            <form class="form_perfil" id="form_perfil">
+                <div class="grupo_input">
+                    <span>Nombre Completo</span>
+                    <input type="text">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Edad</span>
+                    <input type="text">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Teléfono</span>
+                    <input type="text" placeholder="">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Correo Electrónico</span>
+                    <input type="text">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Profesión / Puesto de Interés</span>
+                    <input type="text">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Ubicación</span>
+                    <input type="text">
+                </div>
+
+                <div class="grupo_input">
+                    <span>Habilidades (Separadas por comas)</span>
+                    <input type="text">
+                </div>
+
+                <div class="btns_modal">
+                    <button class="btn_cancelar_modal" id="btn_cancelar_modal">Cancelar</button>
+                    <button class="btn_guardar_modal" id="btn_guardar_modal">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <aside class="sidebar">
         <div class="logo">
             Impulsa<span>GE</span>
@@ -65,6 +113,7 @@
 
     </aside>
     <main>
+
         <h1>Mi perfil</h1>
         <section class="perfil">
 
@@ -73,30 +122,30 @@
             <article class="datos-primarios">
                 <div>
                     <strong>Nombre completo</strong>
-                    <p>Juan de Dios Mejía</p>
+                    <p id="name">Juan de Dios Mejía</p>
                 </div>
                 <div>
                     <strong>Edad</strong>
-                    <p>17 años</p>
+                    <p id="age">17 años</p>
                 </div>
                 <div class="telefono">
                     <strong>Telefono</strong>
-                    <p>+240 555-30-62-61</p>
+                    <p id="tel">+240 555-30-62-61</p>
                 </div>
             </article>
 
             <article class="datos-secundarios">
                 <div>
                     <strong>Correo electronico</strong>
-                    <p>31juandedios13@gmail.com</p>
+                    <p id="email">31juandedios13@gmail.com</p>
                 </div>
                 <div>
                     <strong>Ubicación</strong>
-                    <p>Oyala-Djibloho</p>
+                    <p id="house">Oyala-Djibloho</p>
                 </div>
                 <div>
-                    <strong>Profesión</strong>
-                    <p>Desarrollador Web</p>
+                    <strong>Profesión, carrera o trabajo</strong>
+                    <p id="career">Desarrollador Web</p>
                 </div>
             </article>  
 
@@ -113,9 +162,10 @@
             <h2>Experiencia</h2>
             <p>Desarrollador Web Freelance -- <span>2026 - Actualidad</span></p>
             <p>Prácticas en la Empresa Gitge S.A -- <span>2025 (3 meses) </span></p>
-            <button onclick="alert(`Espere hasta que se programe esta acción`)">Editar perfil</button>
+            <button class="btn_editar_perfil" id="btn_editar_perfil">Editar perfil</button>
         </section>
     
     </main>
 </body>
+<script src="../js/perfil.js"></script>
 </html>
