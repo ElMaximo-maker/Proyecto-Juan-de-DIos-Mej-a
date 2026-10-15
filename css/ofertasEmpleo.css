@@ -1,7 +1,5 @@
-:root{
-
-}
-*{   padding: 0;
+*{  
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -71,7 +69,9 @@
     margin-top: auto;
     border-radius: 10px;
 }
-/*Aqui estaran los estilos del contenido  ain*/
+
+/*Aqui estaran los estilos del contenido main*/
+
 main{
     background-color: aliceblue;
     height:100vh;
@@ -186,27 +186,81 @@ main{
 
 /*Aqui estaran los estilos de las imagenes de empleos*/
 
-.empleos2{
-    margin: 20px 10px;
+.btn_carrusel{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 6;
+}
+.btn_left{
+    left: 0px;
+}
+.btn_right{
+    right: 0px;
+}
+.carrusel_empleos{
+    width: 100%;
+    height: auto;
     display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+
+}
+
+.carrusel_list{
+    width: fit-content;
+    height: 304px;
+    max-width: 90vw;
+    padding: 10px 0px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.carrusel_track{
+    transform: translateX(0px);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content:center;
     gap: 15px;
-    justify-content: left;
-    overflow-y: hidden;
-    overflow-x: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
-.empleos2 article{
-    height: 200px;
-    border-radius: 10px;
-}
-.empleos2 article:hover{
-  transform: translate(0px,-10px)
-}
-.empleos2 article img{
+
+.carrusel{
+    position: relative;
+    width: 200px;
     height: 100%;
-    border-radius: 10px;
+    padding: 0px;
+    display: flex;
+    float: left;
 }
-.empleos2 article img:hover{
-  transform: translateY(-10px)
+.carrusel h4{
+    color: 20px;
+    font-size: 22px;
+    line-height: 13px;
+    padding: 15px;
+    position: absolute;
+    z-index: 5;
+}
+.carrusel h4 small{
+    font-size: 15px;
+    display: block;
+}
+.carrusel a img{
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.carrusel_empleos a{
+    text-decoration: none;
 }
 
 
@@ -217,21 +271,11 @@ main{
 
 .empleo:nth-child(even) button{
     background-color: #00aeff;
-   
-}
-    */
 
 
+*/
 
-
-
-
-
-
-
-
-
-@media(max-width:900px){
+@media (max-width:900px){
     .sidebar{
         width:80px;
         padding: 30px 10px;
