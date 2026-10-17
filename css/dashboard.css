@@ -14,9 +14,10 @@
 }
 .sidebar{
     background:linear-gradient(180deg,#0052cc,#003b99);
-    width: 16%;
+    width: 16%; 
     height: 100vh;
     padding: 30px 25px;
+    transition: transform 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +81,6 @@
 
 main{
     background-color: aliceblue;
-    height: 100vh;
     margin-left:16%;
     padding: 40px;
 }
@@ -230,11 +230,11 @@ main{
     margin:7px;
     border-radius:5px;
     cursor: default;
-    display:none;
-    position:relative;
+    display: none;
+    position: fixed;
     top: 0px;
     left: 0px;
-    z-index:22 ;
+    z-index: 22;
 }
 .desplegar:hover{
     background-color:white;
@@ -324,48 +324,27 @@ main{
 }
 
 
-
-@media(max-width:820px){
-    /*
-    .desplegar{
-        background-color: red;
-        width:40px;
-        height: 40px;
-        position: relative;
-        top: 100px;
-        left: 10px;
-      z-index: 3;
-    }
-      .sidebar{
-        z-index: 1;
-        left:-500px ;
-    }
-    main{
-        margin: 0px;
-        z-index: 222;
-    }
-    */
+@media screen and (max-width:820px){
     .sidebar{
-        width: 16%;
-        padding: 30px 25px;
+        width: 50%; 
+        padding: 30px 0px;
+        transform: translateX(-100%);
+        z-index: 20;
+    }
+    .menus a span{
         display: flex;
+        justify-content: left;
     }
     main{
-        width: 3%;
-        height: 100vh;
-        margin-left:16%;
-        padding: 40px;
-        /*
         width: 100%;
-        padding: 10px;
+        height: auto;
         margin-left: 0px;
-        */
+        padding: 15px;
     }
     .empleo p{
     display: none;
    
     }
-  
 
     .bara-superior{
         flex-direction:column;
@@ -401,5 +380,13 @@ main{
     }
   .empleo p{
         display: block;
+    }
+
+
+
+    /* Sidebar con clase activo */
+
+    .sidebar.activo{
+       transform: translateX(0px);
     }
 }
