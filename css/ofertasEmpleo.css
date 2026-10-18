@@ -142,7 +142,10 @@ main{
     flex-wrap: wrap;
 }
 .empleos .empleo{
+    max-width: fit-content;
+    min-width: 30%;
     height: 200px;
+    flex-grow: 1;
     background-color: white;
     padding: 20px;
     border-radius: 10px;

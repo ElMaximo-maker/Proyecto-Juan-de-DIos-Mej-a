@@ -44,3 +44,35 @@ btn_left.addEventListener('click', () => {
         carrusel_track.style.transform = `translateX(${suma}px)`
     }
 })
+
+
+
+const xhr = new XMLHttpRequest()
+
+xhr.open('get', '../json/empleos.json', true)
+
+xhr.onload = function(){
+    if(xhr.status == 200){
+        const caja_empleos = document.getElementById('empleos')
+        let estructuraHTML = ''
+
+        let empleos = JSON.parse(xhr.responseText)
+        console.log(empleos)
+        empleos.forEach(empleo => {
+            estructuraHTML+=`
+                <article class="empleo">
+                    <h2>${empleo.empleo}</h2>
+                    <p>${empleo.lugar}</p>
+                    <div>${empleo.salario}</div>
+                    <span>${empleo.afinidad}</span>
+                    <button id="btn_postular">Postular Ahora</button>
+                </article>`;
+        })
+        console.log(estructuraHTML)
+
+        caja_empleos.innerHTML = estructuraHTML
+
+    }
+}
+
+xhr.send()
