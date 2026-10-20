@@ -136,14 +136,12 @@ main{
 
 .empleos{
     margin: 0px 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
     gap: 15px;
-    justify-content: left;
-    flex-wrap: wrap;
 }
 .empleos .empleo{
-    max-width: fit-content;
-    min-width: 30%;
     height: 200px;
     flex-grow: 1;
     background-color: white;
@@ -309,6 +307,9 @@ main{
     .menus a{
         justify-content:center;
     }
+    .empleos{
+        grid-template-columns: 50% 50%;
+    }
 }
 
 @media(max-width:600px){
@@ -321,5 +322,8 @@ main{
 
     .bara-superior h1{
         font-size:28px;
+    }
+    .empleos{
+        grid-template-columns: 100%;
     }
 }
