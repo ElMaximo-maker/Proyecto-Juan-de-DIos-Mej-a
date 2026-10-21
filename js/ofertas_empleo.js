@@ -3,7 +3,6 @@ let btn_postular = document.querySelectorAll('#btn_postular')
 
 btn_postular.forEach(btn => {
     btn.addEventListener('click', () => {
-
         let enviar = window.confirm('¿Desea enviar sus documentos?')
         
         if(enviar){
@@ -76,3 +75,52 @@ xhr.onload = function(){
 }
 
 xhr.send()
+
+
+
+const buscador_oferta = document.getElementById('buscador_oferta')
+
+
+buscador_oferta.addEventListener('input', () => {
+
+
+    let busqueda = buscador_oferta.value.trim()
+    let regexBuscador = new RegExp(busqueda, 'ig')
+
+
+    let busqueda_oferta = new XMLHttpRequest()
+
+    busqueda_oferta.open('get', '../json/empleos.json', true)
+    busqueda_oferta.onload = function(){
+        if(busqueda_oferta.status == 200){
+            const caja_empleos = document.getElementById('empleos')
+            let estructuraHTML = ''
+
+            let empleos = JSON.parse(busqueda_oferta.responseText)
+
+            let coincidencias = empleos.filter(empleo => {
+                return regexBuscador.test(empleo.empleo)
+            })
+
+            coincidencias.forEach(coincidencia => {
+                estructuraHTML+=`
+                    <article class="empleo">
+                        <h2>${coincidencia.empleo}</h2>
+                        <p>${coincidencia.lugar}</p>
+                        <div>${coincidencia.salario}</div>
+                        <span>${coincidencia.afinidad}</span>
+                        <button id="btn_postular">Postular Ahora</button>
+                    </article>`;
+            })
+
+            if(estructuraHTML !== ''){
+                caja_empleos.innerHTML = estructuraHTML
+            }else{
+                caja_empleos.textContent = 'No se encuentró el recurso solicitado escriba diferente o es posible que no este disponible'
+            }
+
+        }
+    }
+    busqueda_oferta.send()
+
+})

@@ -137,24 +137,25 @@ main{
 .empleos{
     margin: 0px 10px;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
     gap: 15px;
 }
 .empleos .empleo{
-    height: 200px;
+    height: 220px;
     flex-grow: 1;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgb(133, 133, 177);
+    border: 1px solid rgb(182, 174, 174);
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .empleos .empleo:hover{
-   transform: translate(5px,-5px);
-   box-shadow: 2px 2px 5px rgb(0, 89, 255);
+   transform: translateY(-5px);
+   box-shadow: 0px 0px 1px black;
 }
 .empleos .empleo p{
     color: green;
@@ -176,7 +177,7 @@ main{
     padding: 9px;
     border-radius: 7px;
     border: none;
-    transition: 3s;
+    transition: 0.2s;
 }
 .empleo button:hover{
     background-color: #003b99;
