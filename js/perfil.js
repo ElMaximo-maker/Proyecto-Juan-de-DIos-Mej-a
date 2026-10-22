@@ -1,19 +1,19 @@
 
-const form_perfil = document.getElementById('.form_perfil')
-const nombre = document.getElementById('name')
-const age = document.getElementById('age')
-const tel = document.getElementById('tel')
-const email = document.getElementById('email')
-const house = document.getElementById('house')
-const carrer = document.getElementById('career')
+const form_perfil = document.getElementById('form_perfil')
+let nombre = document.getElementById('name')
+let age = document.getElementById('age')
+let tel = document.getElementById('tel')
+let email = document.getElementById('email')
+let house = document.getElementById('house')
+let carrer = document.getElementById('career')
 
 
-const nombre_modal = document.getElementById('nombre_modal')
-const age_modal = document.getElementById('age_modal')
-const tel_modal = document.getElementById('tel_modal')
-const email_modal = document.getElementById('email_modal')
-const house_modal = document.getElementById('house_modal')
-const carrer_modal = document.getElementById('carrer_modal')
+let nombre_modal = document.getElementById('nombre_modal')
+let age_modal = document.getElementById('age_modal')
+let tel_modal = document.getElementById('tel_modal')
+let email_modal = document.getElementById('email_modal')
+let house_modal = document.getElementById('house_modal')
+let carrer_modal = document.getElementById('carrer_modal')
 
 
  
@@ -30,18 +30,18 @@ btn_cancelar_modal.addEventListener('click', () => {
     modal.style.display = 'none'
 })
 
-btn_guardar_modal.addEventListener('click', () => {
-    guardar_cambios(nombre_modal.value, nombre)
-    guardar_cambios(age_modal.value, age)
-    guardar_cambios(tel_modal.value, tel)
-    guardar_cambios(email_modal.value, email)
-    guardar_cambios(house_modal.value, house)
-    guardar_cambios(carrer_modal.value, carrer)
-
+btn_guardar_modal.addEventListener('click', (e) => {
+    e.preventDefault()
+    guardar_cambios(nombre_modal, nombre)
+    guardar_cambios(age_modal, age)
+    guardar_cambios(tel_modal, tel)
+    guardar_cambios(email_modal, email)
+    guardar_cambios(house_modal, house)
+    guardar_cambios(carrer_modal, carrer)
     modal.style.display = 'none'
 })
 
 function guardar_cambios(nuevoValor, elemento){
-    elemento.textContent = nuevoValor
+    elemento.textContent = nuevoValor.value
 }
 

@@ -6,6 +6,25 @@
 }
 /*Aqui estaran los estilos del sidebar*/
 
+
+/*
+    <div class=" buscador ciudad">
+        <input type="text" list="ciudades" placeholder="Malabo">
+            <datalist id="ciudades">
+                <option>Malabo</option>
+                <option>Bata</option>
+                <option>Djibloho</option>
+                <option>Mongomo</option>
+                <option>Annobón</option>
+                <option>Mbini</option>
+                <option>otro</option>
+            </datalist>
+    </div>
+
+    <div class=" buscador salario">
+        <input type="number" placeholder="Todos los salarios">
+    </div>
+*/
 .sidebar{ 
     background:linear-gradient(180deg,#0052cc,#003b99);
     width: 16%;
@@ -77,65 +96,47 @@ main{
     height:100vh;
     margin-left:16%;
     padding: 0px 40px;
-    overflow: auto;
 }
-.titulo-encabezado{
-    background-color: white;
-    width: 100%;
-    font-size: 25px;
-    padding: 0px 10px 0px 0px;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position:sticky;
-    top: 5px;
-}
-.titulo-encabezado span{
-    background-color: rgb(65, 84, 115);
-    color:white;
-  
-    padding: 0px 10px;
-    border-radius: 20px; 
-}
-.titulo-encabezado i{
-    color: gray;
-}
-.titulo-encabezado i:hover{
-    color: rgb(13, 159, 69);
-}
+
 /*Aqui estaran los estilos de la seccion de los buscadores*/
 
 .buscadores{
+    width: 100%;
     display: flex;  
     margin-bottom: 30px; 
-    justify-content: space-between;
+    justify-content: right;
 }
 .buscador{
-    width: 30%;
+    background-color: white;
+    width: 100px;
     height: 35px;
     margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(180, 212, 238);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.buscador img{
+    width: 30px;
+    height: 100%;
+    border-radius: 100%;
 }
 .buscador input{
-    width: 100%;
+    width: 70px;
     height: 100%;
     font-size: 16px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid rgb(180, 212, 238);
-}
-.buscador input:focus{
+    padding: 0 10px;
     outline: none;
-    border-style: groove;
-    border: 2px solid rgb(0, 81, 255);
+    border: none;
+}
+.buscador:hover{
+    border: 2px solid rgb(180, 212, 238);
 }
 
 /*Aqui estaran los estilos de la seccion empleos*/
 
 .empleos{
-    margin: 0px 10px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
@@ -266,6 +267,19 @@ main{
 }
 
 
+
+
+/* caja empleos con la clase busqueda nula*/
+
+.empleos.busqueda_nula{
+    color: #0052cc;
+    font-size: 20px;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*
 

@@ -77,15 +77,26 @@ xhr.onload = function(){
 xhr.send()
 
 
+/* Aqui estan los scripts del buscador de ofertas */
 
 const buscador_oferta = document.getElementById('buscador_oferta')
+const caja_buscador = document.getElementById('buscador')
 
+let carrusel_empleos= document.getElementById('carrusel_empleos')
+let empleos2 = document.getElementById('empleos2')
 
 buscador_oferta.addEventListener('input', () => {
 
+    caja_buscador.style.width = '100%'
+    buscador_oferta.style.width = '100%'
+    carrusel_empleos.style.display = 'none'
+    empleos2.style.display = 'none'
 
     let busqueda = buscador_oferta.value.trim()
     let regexBuscador = new RegExp(busqueda, 'ig')
+    let regexSalario = new RegExp(`^${busqueda}`)
+
+    
 
 
     let busqueda_oferta = new XMLHttpRequest()
@@ -99,7 +110,13 @@ buscador_oferta.addEventListener('input', () => {
             let empleos = JSON.parse(busqueda_oferta.responseText)
 
             let coincidencias = empleos.filter(empleo => {
-                return regexBuscador.test(empleo.empleo)
+                let valido = true
+                /*
+                if(regexBuscador.test(empleo.empleo) || regexBuscador.test(empleo.lugar) || regexBuscador.test(empleo.salario) || regexBuscador.test(empleo.afinidad)){
+                    valido = true
+                }*/
+
+                return regexBuscador.test(empleo.empleo) || regexBuscador.test(empleo.lugar) || regexSalario.test(empleo.salario)
             })
 
             coincidencias.forEach(coincidencia => {
@@ -114,8 +131,10 @@ buscador_oferta.addEventListener('input', () => {
             })
 
             if(estructuraHTML !== ''){
+                caja_empleos.classList.remove('busqueda_nula')
                 caja_empleos.innerHTML = estructuraHTML
             }else{
+                caja_empleos.classList.add('busqueda_nula')
                 caja_empleos.textContent = 'No se encuentró el recurso solicitado escriba diferente o es posible que no este disponible'
             }
 
