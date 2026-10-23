@@ -136,7 +136,7 @@ main{
 
 /*Aqui estaran los estilos de la seccion empleos*/
 
-.empleos{
+.empleos{ 
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;

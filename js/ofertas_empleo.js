@@ -1,27 +1,5 @@
- 
-let btn_postular = document.querySelectorAll('#btn_postular')
 
-btn_postular.forEach(btn => {
-    btn.addEventListener('click', () => {
-        let enviar = window.confirm('¿Desea enviar sus documentos?')
-        
-        if(enviar){
-            btn.innerText = 'Enviado'
-            btn.style.background = 'green'
-            
-        }else{
-            window.setTimeout(() => {
-                window.alert('Envio cancelado')
-                
-            }, 1000);
-        }
-        
-                                                                  
-    })
-})
-
-
-
+/* Script para el manejo del carrusel de empleos*/
 let btn_left = document.getElementById('btn-left')
 let btn_right = document.getElementById('btn-right')
 
@@ -45,7 +23,7 @@ btn_left.addEventListener('click', () => {
 })
 
 
-
+/* Realizando la petición para rdedibir las ofertas de empleo */
 const xhr = new XMLHttpRequest()
 
 xhr.open('get', '../json/empleos.json', true)
@@ -56,7 +34,6 @@ xhr.onload = function(){
         let estructuraHTML = ''
 
         let empleos = JSON.parse(xhr.responseText)
-        console.log(empleos)
         empleos.forEach(empleo => {
             estructuraHTML+=`
                 <article class="empleo">
@@ -64,10 +41,9 @@ xhr.onload = function(){
                     <p>${empleo.lugar}</p>
                     <div>${empleo.salario}</div>
                     <span>${empleo.afinidad}</span>
-                    <button id="btn_postular">Postular Ahora</button>
+                    <button class="btn_postular">Postular Ahora</button>
                 </article>`;
         })
-        console.log(estructuraHTML)
 
         caja_empleos.innerHTML = estructuraHTML
 
@@ -78,7 +54,6 @@ xhr.send()
 
 
 /* Aqui estan los scripts del buscador de ofertas */
-
 const buscador_oferta = document.getElementById('buscador_oferta')
 const caja_buscador = document.getElementById('buscador')
 
@@ -89,8 +64,13 @@ buscador_oferta.addEventListener('input', () => {
 
     caja_buscador.style.width = '100%'
     buscador_oferta.style.width = '100%'
-    carrusel_empleos.style.display = 'none'
-    empleos2.style.display = 'none'
+    if(buscador_oferta.value !== ''){
+        carrusel_empleos.style.display = 'none'
+        empleos2.style.display = 'none'
+    }else{
+        carrusel_empleos.style.display = 'flex'
+        empleos2.style.display = 'grid'
+    }
 
     let busqueda = buscador_oferta.value.trim()
     let regexBuscador = new RegExp(busqueda, 'ig')
@@ -100,7 +80,7 @@ buscador_oferta.addEventListener('input', () => {
 
 
     let busqueda_oferta = new XMLHttpRequest()
-
+    
     busqueda_oferta.open('get', '../json/empleos.json', true)
     busqueda_oferta.onload = function(){
         if(busqueda_oferta.status == 200){
@@ -109,13 +89,7 @@ buscador_oferta.addEventListener('input', () => {
 
             let empleos = JSON.parse(busqueda_oferta.responseText)
 
-            let coincidencias = empleos.filter(empleo => {
-                let valido = true
-                /*
-                if(regexBuscador.test(empleo.empleo) || regexBuscador.test(empleo.lugar) || regexBuscador.test(empleo.salario) || regexBuscador.test(empleo.afinidad)){
-                    valido = true
-                }*/
-
+            let coincidencias = empleos.filter(empleo => { // Buscando las coincidecias
                 return regexBuscador.test(empleo.empleo) || regexBuscador.test(empleo.lugar) || regexSalario.test(empleo.salario)
             })
 
@@ -126,8 +100,8 @@ buscador_oferta.addEventListener('input', () => {
                         <p>${coincidencia.lugar}</p>
                         <div>${coincidencia.salario}</div>
                         <span>${coincidencia.afinidad}</span>
-                        <button id="btn_postular">Postular Ahora</button>
-                    </article>`;
+                        <button class="btn_postular">Postular Ahora</button>
+                    </article>`
             })
 
             if(estructuraHTML !== ''){
@@ -138,8 +112,31 @@ buscador_oferta.addEventListener('input', () => {
                 caja_empleos.textContent = 'No se encuentró el recurso solicitado escriba diferente o es posible que no este disponible'
             }
 
+
         }
     }
     busqueda_oferta.send()
 
+})
+
+
+/* Animación de postulación de empleo */
+const caja_empleos = document.getElementById('empleos')
+
+caja_empleos.addEventListener('click', (e) => {
+    if(e.target && e.target.classList.contains('btn_postular')){
+        const btn = e.target
+        let enviar = window.confirm('¿Desea enviar sus documentos?')
+        
+        if(enviar){
+            btn.innerText = 'Enviado'
+            btn.style.background = 'green'
+            
+        }else{
+            window.setTimeout(() => {
+                window.alert('Envio cancelado')
+                
+            }, 1000);
+        }
+    }
 })
