@@ -32,7 +32,7 @@ header{
 }
 header .logo{
     color:var(--color-primario);
-    width:auto;
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +47,7 @@ header .logo strong{
     font-size: 25px;
 }
 header .barra-menus{
-    display: none;
+   display: none;
 }
 header nav{
     display: flex;
@@ -66,6 +66,9 @@ nav .menus a:hover{
     color:rgb(118, 215, 200);
 
 }
+
+
+
 
 /**Aqui iran los estilos del main*/
 
@@ -563,30 +566,54 @@ footer p{
 
 
 
+/* nav with class desplegar */
+
+header nav.desplegar{
+    transform: translateX(0px);
+}
+
+
+
+
+
 @media screen and (max-width:900px){
-    .barra-menus{
+    header nav{
+        background-color: var(--color-principal);
+        transform: translateX(-100%);
+        transition: 0.3s ease-in-out;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 40%;
+        height: 100vh;
+    }
+    header nav .menus{
+        width: 40%;
+        font-size: 20px;
+        padding: 60px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    header .barra-menus{
         background-color: rgb(35, 211, 73);
         color: aliceblue;
         font-size:30px;
         width: 60px;
         height: 40px;
-        border: 3px solid aliceblue;
+        border: 1px solid aliceblue;
         border-radius: 10px;
         display: flex;
-        justify-content:var(--centro);
+        justify-content: var(--centro);
         align-items: var(--centro);
     }
     .barra-menus:hover{
-        background-color: rgb(23, 146, 50); 
+        background-color: rgb(23, 146, 50);
     }
     .barra-menus:active{
        background-color: rgb(35, 211, 73);
     }
-    header nav {
-        display: none;
-    }
-
-
+    
     /*Aqui estaran los estilos de la sección problema */
 
     section.problema>div .contenedor{ /* Estilos del contenedor */
@@ -648,10 +675,10 @@ footer p{
     /*Aqui estaran los estilos de la sección de objetivos */
 
     .objetivos>div h1{
-    font-size: 30px;
+        font-size: 30px;
     }
     .objetivos article{
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     .lista_objetivos>p{
         max-width: 660px;

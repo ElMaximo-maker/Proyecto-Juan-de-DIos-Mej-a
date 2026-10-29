@@ -121,6 +121,7 @@ buscador_oferta.addEventListener('input', () => {
 
 
 /* Animación de postulación de empleo */
+
 const caja_empleos = document.getElementById('empleos')
 
 caja_empleos.addEventListener('click', (e) => {
